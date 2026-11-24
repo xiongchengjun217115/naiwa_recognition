@@ -1,0 +1,34 @@
+%YAML:1.0
+---
+# OpenCV 的 8 位 HSV 中，H 取 0–179，S 和 V 取 0–255。
+hue_min: 0
+hue_max: 52
+edge_hue_max: 91
+seed_saturation: 46
+edge_saturation: 12
+# 与当前帧 V 分量第 85 百分位的比值，单位 %。
+seed_chroma_pct: 15
+edge_chroma_pct: 3
+visible_v: 5
+# 原图像素半径，核大小为 2 × 半径 + 1；0 关闭对应操作。
+seed_open_radius: 12
+recover_radius: 18
+loose_open_radius: 5
+close_radius: 2
+# 沿轮廓法线重新找边的最大外向距离。0 关闭边缘复核。
+edge_refine_radius: 20
+# 用于发现眼缘小凹口的椭圆核半径。0 关闭凹口修补。
+eye_notch_radius: 17
+# 等弧长轮廓平滑尺度，单位为像素。0 保留原始轮廓点。
+contour_smooth_px: 7
+# 脚底暗谷的亮度差下限，单位 %；0 关闭倒影修剪。
+floor_chroma_pct: 9
+floor_contrast_pct: 3
+# 用于学习稳定字幕笔画的采样帧数，取 0 时跳过学习。
+subtitle_samples: 150
+# 低于这个 V 百分位时允许借用已匹配邻帧的轮廓，0 关闭。
+fade_below_v: 50
+fade_match_pct: 88
+# 面积下限，以全画面面积的万分比表示。
+min_area_per_10000: 18
+line_width: 2
